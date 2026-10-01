@@ -1,0 +1,23 @@
+column,role,unit,description
+record_id,metadata,identifier,Random row pseudonym. Not a predictor or a group identifier.
+condition,metadata,category,Acquisition condition inferred from source-file provenance. Not verified per-flow Tor transport.
+collection_day_id,metadata,identifier,Random same-day token shared across files. Calendar dates are not released.
+in_shared_date_browsing,metadata,0 or 1,"Browsing record on a local calendar day containing both browsing conditions. Overlapping subset, not an independent dataset."
+loopback_pair,metadata,0 or 1,Both original addresses start with 127. Documents the direct-file-transfer capture confound. Not a predictor.
+src_address_id,metadata,identifier,"Source address pseudonym, shared address namespace across directions and files."
+dst_address_id,metadata,identifier,"Destination address pseudonym, shared address namespace across directions and files."
+src_port_id,metadata,identifier,"Source port pseudonym, shared port namespace across directions and files."
+dst_port_id,metadata,identifier,"Destination port pseudonym, shared port namespace across directions and files."
+protocol,metadata,IP protocol number,Retained for connection grouping. Not a predictor.
+duration_ms,predictor,ms,Bidirectional flow duration.
+src2dst_packets,predictor,packets,Source-to-destination packet count.
+dst2src_packets,predictor,packets,Destination-to-source packet count.
+src2dst_bytes,predictor,bytes,Source-to-destination byte count.
+dst2src_bytes,predictor,bytes,Destination-to-source byte count.
+total_packets,predictor,packets,Sum of the two directional packet counts.
+total_bytes,predictor,bytes,Sum of the two directional byte counts.
+packet_rate,predictor,packets/s,Total packets divided by duration in seconds. Missing for nonpositive duration.
+byte_rate,predictor,bytes/s,Total bytes divided by duration in seconds. Missing for nonpositive duration.
+mean_packet_bytes,predictor,bytes/packet,Total bytes divided by total packets.
+forward_packet_fraction,predictor,dimensionless,Source-to-destination packets divided by total packets.
+forward_byte_fraction,predictor,dimensionless,Source-to-destination bytes divided by total bytes.

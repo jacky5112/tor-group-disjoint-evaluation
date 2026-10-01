@@ -1,0 +1,4 @@
+population,rows,predictors,connection_keys,feature_vectors,original_components,released_components,feature_values_equal,connection_partition_equal,component_membership_equal
+Collected-4,6709,12,6048,6446,5792,5792,True,True,True
+Collected-browsing,3488,12,3419,3324,3258,3258,True,True,True
+Collected-browsing-shared-dates,3133,12,3099,2982,2950,2950,True,True,True
